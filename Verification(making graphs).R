@@ -684,8 +684,8 @@ rm(brier_120h_zaga,brier_120h_qrf,df_120h_zaga,df_120h_qrf,obs)
 
 #120h_zaga_5
 obs = as.data.frame(finaltest_120h$R4final1)
-obs$`final2018_120h$R4final1`[which(obs$`finaltest_120h$R4final1` <= 5)] <- 0
-obs$`final2018_120h$R4final1`[which(obs$`finaltest_120h$R4final1` > 5)] <- 1
+obs$`finaltest_120h$R4final1`[which(obs$`finaltest_120h$R4final1` <= 5)] <- 0
+obs$`finaltest_120h$R4final1`[which(obs$`finaltest_120h$R4final1` > 5)] <- 1
 df_120h_zaga = cbind.data.frame(CDF_120h_zaga$V9,obs$`finaltest_120h$R4final1`)
 colnames(df_120h_zaga) = c("pred","obs")
 #A<- verify(df_120h_zaga$obs, df_120h_zaga$pred, frcst.type = "prob", obs.type = "binary")
@@ -695,8 +695,8 @@ brier.ss_120h_zaga_5 = brier_120h_zaga$ss
 
 #120h_qrf_5
 obs = as.data.frame(finaltest_120h$R4final1)
-obs$`final2018_120h$R4final1`[which(obs$`finaltest_120h$R4final1` <= 5)] <- 0
-obs$`final2018_120h$R4final1`[which(obs$`finaltest_120h$R4final1` > 5)] <- 1
+obs$`finaltest_120h$R4final1`[which(obs$`finaltest_120h$R4final1` <= 5)] <- 0
+obs$`finaltest_120h$R4final1`[which(obs$`finaltest_120h$R4final1` > 5)] <- 1
 df_120h_qrf = cbind.data.frame(CDF_120h_qrf$V9,obs$`finaltest_120h$R4final1`)
 colnames(df_120h_qrf) = c("pred","obs")
 #A<- verify(df_120h_qrf$obs, df_120h_qrf$pred, frcst.type = "prob", obs.type = "binary")
